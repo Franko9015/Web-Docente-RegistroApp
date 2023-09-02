@@ -31,10 +31,10 @@ function logout() {
         // Evita que el enlace redireccione inmediatamente
         event.preventDefault();
 
-        // Desactiva el botón para evitar clics repetidos
+        
         document.getElementById('cerrarSesion').classList.add('disabled');
         
-        // Oculta el texto del botón y muestra la animación de carga
+        
         document.getElementById('botonTexto').style.display = 'none';
         document.getElementById('animacionCarga').style.display = 'inline-block';
 
@@ -59,6 +59,48 @@ function mostrarConfirmacion() {
         }
     });
 }
+
+function limpiarFormulario() {
+    document.getElementById('tipoComunicado').value = 'general';
+    document.getElementById('mensaje').value = '';
+}
+
+async function enviarComunicado() {
+    const tipoComunicado = document.getElementById('tipoComunicado').value;
+    const tituloComunicado = document.getElementById('tituloComunicado').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    if (mensaje.trim() === '' || tituloComunicado.trim() === '') {
+        Swal.fire('Error', 'Todos los campos deben estar completos', 'error');
+        return;
+    }
+
+    const { value: confirmarEnvio } = await Swal.fire({
+        title: '¿Estás seguro de enviar el comunicado?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, enviar',
+        cancelButtonText: 'Cancelar'
+    });
+
+    if (confirmarEnvio) {
+        Swal.fire({
+            title: 'Enviando comunicado...',
+            icon: 'info',
+            showConfirmButton: false,
+            allowOutsideClick: false
+        });
+
+        setTimeout(() => {
+            Swal.fire('Comunicado enviado con éxito', '', 'success').then(() => {
+                // Redirige al index.html
+                window.location.href = 'index.html';
+            });
+        }, 3000); // Simula un envío de 3 segundos
+    }
+}
+
+
 
 
 
