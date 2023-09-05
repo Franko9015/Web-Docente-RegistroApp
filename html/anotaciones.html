@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Anotación</title>
+    <!-- Enlaces a los archivos CSS de Bootstrap a través de BootstrapCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+        *Inserte Logo*
+    </a>
+    <a class="btn btn-secondary ml-2" href="../html/index.html">Volver atrás</a>
+</nav>
+<body>
+    <div class="container mt-5">
+        <h1>Página de Anotación</h1>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre del alumno">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido del alumno">
+            </div>
+            <div class="form-group">
+                <label for="curso">Curso</label>
+                <input type="text" class="form-control" id="curso" placeholder="Curso del alumno">
+            </div>
+            <div class="form-group">
+                <label for="tipoAnotacion">Tipo de Anotación</label>
+                <select class="form-control" id="tipoAnotacion">
+                    <option value="bitacora">Bitácora</option>
+                    <option value="anotacionNegativa">Anotación Negativa</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comentario">Comentario</label>
+                <textarea class="form-control" id="comentario" rows="5" placeholder="Escribe tu anotación aquí"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Guardar Anotación</button>
+        </form>
+    </div>
+
+    <!-- Inclusión de Bootstrap JS a través de BootstrapCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
