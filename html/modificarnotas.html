@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificación de Notas</title>
+    <!-- Enlaces a los archivos CSS de Bootstrap a través de BootstrapCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <style>
+        .notas-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+        *Inserte Logo*
+    </a>
+</nav>
+<body>
+    <div class="container mt-5 notas-container">
+        <h1>Modificación de Notas</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre del Alumno</th>
+                    <th scope="col">Parcial 1</th>
+                    <th scope="col">Parcial 2</th>
+                    <th scope="col">Parcial 3</th>
+                    <th scope="col">Parcial 4</th>
+                    <th scope="col">Examen Final</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 1"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 2"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 3"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 4"></td>
+                    <td><input type="number" class="form-control" placeholder="Examen Final"></td>
+                </tr>
+                <!-- Agrega más filas para más alumnos poniendo TR-->
+                <tr>
+                <td>Pepe Simio</td>
+                <td><input type="number" class="form-control" placeholder="Parcial 1"></td>
+                <td><input type="number" class="form-control" placeholder="Parcial 2"></td>
+                <td><input type="number" class="form-control" placeholder="Parcial 3"></td>
+                <td><input type="number" class="form-control" placeholder="Parcial 4"></td>
+                <td><input type="number" class="form-control" placeholder="Examen Final"></td>
+                </tr>
+                <tr>
+                    <td>Maria Gomez</td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 1"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 2"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 3"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 4"></td>
+                    <td><input type="number" class="form-control" placeholder="Examen Final"></td>
+                </tr>
+                <tr>
+                    <td>David Zapata</td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 1"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 2"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 3"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 4"></td>
+                    <td><input type="number" class="form-control" placeholder="Examen Final"></td>
+                </tr>
+                <tr>
+                    <td>Juan Lopez</td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 1"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 2"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 3"></td>
+                    <td><input type="number" class="form-control" placeholder="Parcial 4"></td>
+                    <td><input type="number" class="form-control" placeholder="Examen Final"></td>
+                </tr>
+            </tbody>
+        </table>
+        <td><button class="btn btn-primary" onclick="guardarCambiosNotas()">Guardar Cambios</button></td>
+    </div>
+    
+    <!-- Inclusión de Bootstrap JS a través de BootstrapCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="../js/scriptsgenerales.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
